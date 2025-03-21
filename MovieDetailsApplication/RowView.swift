@@ -15,12 +15,12 @@ struct RowView: View {
             Image(systemName: "movieclapper.fill")
                 .font(.title)
             VStack(alignment: .leading){
-                Text(movie.id)
-                    .font(.headline)
-                Text(movie.trackName.uppercased())
+//                Text(movie.trackId)
+//                    .font(.headline)
+                Text(movie.trackName ?? "No Movie Name".uppercased())
                     .font(.callout)
-                Text(movie.primaryGenreName).bold()
-                Text(movie.shortDescription)
+                Text(movie.primaryGenreName ?? "No Primary Genre Name").bold()
+                Text(movie.longDescription ?? "No Long Description")
             }
             .padding(.horizontal)
         }
