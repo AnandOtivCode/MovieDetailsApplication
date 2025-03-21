@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     // Decode JSON movie file
-    let movies: [Movie] = Bundle.main.decode("AllMovies.json")
+    let movies: [Movie] = Bundle.main.decode("AllMovies")
     
     var body: some View {
         NavigationStack {

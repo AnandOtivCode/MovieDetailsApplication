@@ -9,7 +9,7 @@
 import Foundation
 
 struct Movies: Codable{
-    var data : [Movie] 
+    var results : [Movie] 
 }
 
 struct Movie:Codable, Identifiable{
@@ -45,7 +45,7 @@ struct Movie:Codable, Identifiable{
 
 extension Bundle{
 func decode(_ file: String) -> [Movie]{
-    guard let url = self.url(forResource: file, withExtension: nil) else {
+    guard let url = self.url(forResource: file, withExtension:"json") else {
         fatalError("Can't locate this file")
     }
     guard let data = try? Data(contentsOf: url) else {
@@ -56,7 +56,7 @@ func decode(_ file: String) -> [Movie]{
         fatalError("Can't decode - problem with keys and properties or values")
     }
     
-    return movies.data
+    return movies.results
 }
 }
 
