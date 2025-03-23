@@ -34,23 +34,26 @@ struct MainView: View {
                         .foregroundColor(Color.green)
                         .padding(.top, 15.0)
                     
-                }
-            }
-            
-            
-            
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Info", systemImage: "info.circle"){
+                    Button("Developer Information", systemImage: "info.circle"){
                         sheetIsShowing.toggle()
                     }
-                }
-            }
-            .sheet(isPresented: $sheetIsShowing) {
-                VStack{
-                    Text("It's working")
+                    .padding(.top, 5.0)
                     
                 }
+            }
+            
+            
+            
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button("DeveloperInformation", systemImage: "info.circle"){
+//                        sheetIsShowing.toggle()
+//                    }
+//                    
+//                }
+//            }
+            .sheet(isPresented: $sheetIsShowing) {
+                DeveloperInformationView()
             }
         }
     }

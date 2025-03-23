@@ -18,14 +18,16 @@ struct RowView: View {
 //                Text(movie.trackId)
 //                    .font(.headline)
                 Text(movie.trackName ?? "No Movie Name".uppercased())
-                    .font(.callout)
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.red)
                 Text(movie.shortDescription ?? "")
-                Text(movie.primaryGenreName ?? "No Primary Genre Name").bold()
-                Text(movie.contentAdvisoryRating ?? "No Content Advisory Rating")
+                Text("Genre Name: \(movie.primaryGenreName ?? "No Primary Genre Name")")
+                Text("Content Advisory Rating: \(movie.contentAdvisoryRating ?? "No Content Advisory Rating")")
                 
                 if movie.shortDescription != nil {
                     
-                    Text(movie.shortDescription ?? "").font(.footnote).fontWeight(.heavy).multilineTextAlignment(.leading)
+                    Text("Movie Description :\(movie.shortDescription ?? "")").font(.footnote).fontWeight(.heavy).multilineTextAlignment(.leading)
                     
                 }
                 

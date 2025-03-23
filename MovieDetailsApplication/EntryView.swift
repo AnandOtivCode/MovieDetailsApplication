@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct EntryView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+   
+        var body: some View {
+            TabView{
+                Tab("Main Page", systemImage: "movieclapper.fill"){
+                    MainView()
+                }
+                Tab("Movie Search", systemImage: "magnifyingglass"){
+                    ContentView()
+                }
+            }
+        }
     }
-}
+
 
 #Preview {
     EntryView()
