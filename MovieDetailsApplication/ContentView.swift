@@ -7,6 +7,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             // Display All Movies Rows
+            Text("Results : " + "\(movies.count)")
             List(movies) { movie in
                 NavigationLink(destination:
                     

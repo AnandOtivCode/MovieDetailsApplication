@@ -9,7 +9,7 @@
 import Foundation
 
 struct Movies: Codable{
-    var results : [Movie] 
+    var results : [Movie]
 }
 
 struct Movie:Codable, Identifiable{
@@ -23,7 +23,9 @@ struct Movie:Codable, Identifiable{
 //static var exampleCampsite = Campsite(id: "E7CC7363-9C34-42ED-B3F0-769BB39E9400", name: "Anacapa Island Campground", description: "Primitive camping is available (seven sites; $15 per night per site; reservations required). Picnic table, food storage box, and pit toilet are provided. No water is available. Distance from landing to campground is one-half mile and includes a 157-stair climb. WARNING: Western gulls nest on Anacapa Island From April through mid-August. During this time, visitors will encounter seabird rookery conditions: guano, strong odor, constant noise, bird carcasses, and birds protecting their territory.", parkCode: "chis", numberOfSitesReservable: "7", numberOfSitesFirstComeFirstServe: "1")
 
 
-    static var exampleMovie = Movie(trackId:43,trackName: "Thunderstruck", collectionName: "AC/DC Back in Black", artistName: "AC/DC", country: "US", contentAdvisoryRating: "No", primaryGenreName: "Hard Rock", shortDescription: "The title track from the iconic album AC/DC's greatest hit, 'Back in Black'.", longDescription: "Very long description for the track")
+    static var exampleMovie = Movie(trackId:43,trackName: "Thunderstruck", collectionName: "AC/DC Back in Black", artistName: "AC/DC", country: "US", contentAdvisoryRating: "No",primaryGenreName: "Hard Rock",trackPrice:10.55,trackRentalPrice:5.30 ,shortDescription:"The title track from the iconic album AC/DC's greatest hit, 'Back in Black'.", longDescription: "Very long description for the track")
+    
+    /*trackPrice:10.55,trackRentalPrice:5.30,*/
 
 
     var trackId:Int? = 0
@@ -33,7 +35,9 @@ struct Movie:Codable, Identifiable{
     var country: String?
     var contentAdvisoryRating: String?
     var primaryGenreName: String?
-    var shortDescription:String?
+    var trackPrice : Double? = 0.0
+    var trackRentalPrice: Double? = 0.0
+    var shortDescription:String? = nil
     var longDescription:String?
     
     

@@ -23,8 +23,12 @@ struct DetailView: View {
                 .font(.title2)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 10)
-            Text(movie.longDescription ?? "No Long Description")
+            Text("Synopsis : \(movie.longDescription ?? "No Long Description")")
+            Text("Buy: $\(String(format: "%.2f", movie.trackPrice ?? 0.00))")
+            Text("Rent: $\(String(format: "%.2f", movie.trackRentalPrice ?? 0.00))")
+            
             Divider()
+            
             
         }
     }
@@ -33,4 +37,5 @@ struct DetailView: View {
     #Preview {
         DetailView(movie: Movie.exampleMovie)
     }
+    
 

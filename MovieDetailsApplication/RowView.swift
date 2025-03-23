@@ -19,8 +19,16 @@ struct RowView: View {
 //                    .font(.headline)
                 Text(movie.trackName ?? "No Movie Name".uppercased())
                     .font(.callout)
+                Text(movie.shortDescription ?? "")
                 Text(movie.primaryGenreName ?? "No Primary Genre Name").bold()
-                Text(movie.longDescription ?? "No Long Description")
+                Text(movie.contentAdvisoryRating ?? "No Content Advisory Rating")
+                
+                if movie.shortDescription != nil {
+                    
+                    Text(movie.shortDescription ?? "").font(.footnote).fontWeight(.heavy).multilineTextAlignment(.leading)
+                    
+                }
+                
             }
             .padding(.horizontal)
         }
