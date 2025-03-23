@@ -5,7 +5,7 @@
 //  Created by Anand Otiv on 2025-03-20.
 //
 
-
+//Class for decoding and reading JSON movie file and putting into Movie
 import Foundation
 
 struct Movies: Codable{
@@ -40,7 +40,7 @@ struct Movie:Codable, Identifiable{
     var shortDescription:String? = nil
     var longDescription:String?
     
-    
+    //For adhering to Identifiable Protocol
     var id: Int { trackId ?? 0}
 
     

@@ -10,6 +10,8 @@ import SwiftUI
 struct EntryView: View {
    
         var body: some View {
+            
+            //Add tabs to switch between different views
             TabView{
                 Tab("Main Page", systemImage: "movieclapper.fill"){
                     MainView()

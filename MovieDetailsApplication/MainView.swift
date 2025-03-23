@@ -18,6 +18,8 @@ struct MainView: View {
             ZStack{
                 Color(.black)
                 //                .ignoresSafeArea()
+                
+                //Background Image
                 Image("LordOfTheRingsIcon").resizable().frame(width: 400, height: 543).opacity(0.3)
                 VStack{
                     
@@ -34,6 +36,8 @@ struct MainView: View {
                         .foregroundColor(Color.green)
                         .padding(.top, 15.0)
                     
+                    
+                    //Display Developer Information Page
                     Button("Developer Information", systemImage: "info.circle"){
                         sheetIsShowing.toggle()
                     }
@@ -52,6 +56,7 @@ struct MainView: View {
 //                    
 //                }
 //            }
+            //Toggle showing developer information view
             .sheet(isPresented: $sheetIsShowing) {
                 DeveloperInformationView()
             }
@@ -59,9 +64,6 @@ struct MainView: View {
     }
 }
 
-
-
-//  Button("Developer Information", systemImage: "info.circle")
 #Preview {
     MainView()
 }

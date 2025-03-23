@@ -6,8 +6,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            // Display All Movies Rows
+            //Display number of movies
             Text("Results : " + "\(movies.count)")
+                .font(.title3)
+                
+            
+            // Display All Movies Rows
             List(movies) { movie in
                 NavigationLink(destination:
                     
@@ -15,6 +19,7 @@ struct ContentView: View {
                     RowView(movie: movie)
                 }
             }
+            //Set the Title for screen
             .navigationTitle("Movies")
         }
     }

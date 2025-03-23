@@ -3,7 +3,8 @@
 //  MovieDetailsApplication
 //
 //  Created by Anand Otiv on 2025-03-20.
-//
+//Display Individual Movie Row Views
+
 
 import SwiftUI
 
@@ -11,6 +12,7 @@ import SwiftUI
 struct RowView: View {
     var movie: Movie
     var body: some View {
+        
         HStack{
             Image(systemName: "movieclapper.fill")
                 .font(.title)
@@ -25,6 +27,7 @@ struct RowView: View {
                 Text("Genre Name: \(movie.primaryGenreName ?? "No Primary Genre Name")")
                 Text("Content Advisory Rating: \(movie.contentAdvisoryRating ?? "No Content Advisory Rating")")
                 
+                //If no movie short description don't show anything
                 if movie.shortDescription != nil {
                     
                     Text("Movie Description :\(movie.shortDescription ?? "")").font(.footnote).fontWeight(.heavy).multilineTextAlignment(.leading)
